@@ -1,14 +1,13 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
 int main(){
 	int t;
 	cin>>t;
 	while(t--){
-	    int a[5];
-	    cin>>a[0]>>a[1]>>a[2]>>a[3]>>a[4];
-	    sort(a, a+3);
-	    if(a[1]+a[2]<=a[3] and a[0]<=a[4]) cout<<"YES"<<endl;
+	    int a, b, c, d, e;
+	    cin>>a>>b>>c>>d>>e;
+	    if((a+b<=d and c<=e) or (b+c<=d and a<=e) or (a+c<=d and b<=e))
+	    cout<<"YES"<<endl;
 	    else cout<<"NO"<<endl;
 	}
 	return 0;
