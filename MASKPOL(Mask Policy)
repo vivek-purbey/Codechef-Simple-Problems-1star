@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,a,b;//n:total person; a:infected person.
+	    cin>>n>>a;
+	    b=n-a;//b:total number of uninfected person.
+	    if(a>=b) cout<<b<<endl;
+	    else cout<<a<<endl;
+	}
+	return 0;
+}
