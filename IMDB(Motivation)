@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int t; cin>>t; while(t--){
+	    int n,x,m=-999; cin>>n>>x;
+	    for(int i=1;i<=n;i++){
+	        int s,r; cin>>s>>r;
+	        if(x>=s){
+	            m=max(m,r);
+	        }
+	    }
+	    cout<<m<<endl;
+	}
+	return 0;
+}
