@@ -8,12 +8,12 @@ int main(){
 	        int t,d;
 	        cin>>t>>d;
 	        if(t<=k){
-	            sum=sum+0;
-	            k=k-t;
+	            sum=sum+0; //free internet usage
+	            k=k-t; // free net time reduce
 	        }
 	        else{
-	            sum=sum+(t-k)*d;
-	            k=0;
+	            sum=sum+(t-k)*d; // chef to pay
+	            k=0; // free net completely exhausted
 	        }
 	    }
 	    cout<<sum<<endl;
