@@ -1,0 +1,46 @@
+// by set using stl:
+#include<iostream>
+#include<set>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int a[n];
+	    set<int>day; //set always contains unique elements
+	    for(int i=0;i<n;i++){
+	        cin>>a[i];
+	        day.insert(a[i]);
+	    }
+	    cout<<day.size()<<endl;
+	}
+	return 0;
+}
+// by nested array:
+/*
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0;i<n;i++)
+        cin>>a[i];
+        int count=0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(a[i]==a[j])
+                count++;
+                break;
+            }
+        }
+        cout<<n-count<<endl;
+    }
+    return 0;
+}
+*/
