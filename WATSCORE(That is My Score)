@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int a[12] = {0};
+        for (int i=0;i<n;i++)
+        {
+            int p, s;
+            cin>>p>>s;
+            if (p<9 and a[p]<s)
+            {
+                a[p] = s;
+            }
+        }
+        int sum = 0;
+        for (int j=0; j<9;j++)
+        {
+            sum+=a[j];
+        }
+        cout<<sum<< endl;
+    }
+    return 0;
+}
