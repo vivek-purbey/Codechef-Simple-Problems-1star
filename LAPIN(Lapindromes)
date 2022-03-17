@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string s;
+        cin>>s;
+        int l = s.size();
+        if(l%2==0)
+        {
+            int a = l/2;
+            string s1 = s.substr(0,a);
+            sort(s1.begin(),s1.end());
+            string s2= s.substr(a,a);
+            sort(s2.begin(),s2.end());
+            if(s1==s2)
+            {
+                cout<<"YES"<<endl;
+
+            }
+            else{
+                cout<<"NO"<<endl;
+            }
+        }
+        else{
+            float l = s.size();
+            int a = floor(l/2);
+            string s1 = s.substr(0,a);
+            sort(s1.begin(),s1.end());
+            string s2= s.substr(a+1,a);
+            sort(s2.begin(),s2.end());
+            if(s1==s2)
+            {
+                cout<<"YES"<<endl;
+
+            }
+            else{
+                cout<<"NO"<<endl;
+            }
+
+        }
+    }
+    return 0;
+}
