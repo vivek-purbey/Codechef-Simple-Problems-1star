@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+	    int n, count_s_0=0, count_s_1=0, count_r_0=0, count_r_1=0;
+	    cin>>n;
+	    char s[n], r[n];
+	    for(int i=0;i<n;i++){
+	        cin>>s[i];
+	        if(s[i]=='0') count_s_0++;
+	        if(s[i]=='1') count_s_1++;
+	    }
+	    for(int i=0;i<n;i++){
+	        cin>>r[i];
+	        if(r[i]=='0') count_r_0++;
+	        if(r[i]=='1') count_r_1++;
+	    }
+	   if((count_s_0==count_r_0) and (count_s_1==count_r_1))
+	   cout<<"YES"<<endl;
+	   else
+	   cout<<"NO"<<endl;
+	}
+	return 0;
+}
+// logic : count the frequency of 0 and 1 in both s and r->
+//string and if the frequency of 0 and 1 same in both the string then it can be swapped otherwise no.
