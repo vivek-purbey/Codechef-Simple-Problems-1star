@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+	    int n, m, count=0;
+	    cin>>n;
+	    m=n%10;
+	    n=n/10;
+	    while(n!=0){
+	        int r;
+	        r=n%10;
+	        n=n/10;
+	        if(m%2==0 and r%2==0) count++;
+	        else if(m%2!=0 and r%2!=0) count++;
+	        else count;
+	    }
+	    if(count==0) cout<<"NO"<<endl;
+	    else cout<<"YES"<<endl;
+	}
+	return 0;
+}
+/*
+Logic:
+(x+y)%2=0 it means sum of x and y must be even.
+so, when sum of two number even??
+when both x and y either odd or even then sum of both will come even else come odd.
+find last digit of given number and store it in some variable
+then, find last digit one by one of remaining number and check if first last and now last
+digit both even or odd then condition satisfy and print YES else No.
+*/
